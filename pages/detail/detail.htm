@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Arima:wght@100..700&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Playwrite+HU:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../style.css">
+    
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="logo">
+            <a href="#"><img src="../../img/logo.png" alt=""></a>
+        </div>
+        <nav class="header_navbar">
+            <ul>
+            <li><a href="../../index.htm">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="header_info">
+            <i class="fa fa-search"></i>
+            <a class="cart" href="#">
+                <p class="cart-items">0</p>
+                <i class="fa fa-shopping-basket"></i>
+            </a>
+            <a class="header-account" href="#">
+                <i class="fa fa-user"></i>
+                <p class="accountname">Đăng nhập</p>
+            </a>
+        </div>
+    </header>
+    <br>
+     <div class="detail-container">
+        <a href="../../index.htm"><i class="fa-regular fa-arrow-left fa-2xl" style="color: #00c7fc;"></i></a>
+        <div class="detail">
+            <div class="detail-image">
+                <img src="../../img/banphim.jpg" alt="">
+            </div>
+            <div class="detail-info">
+                <h2>Razer Huntsman Mini</h2>
+                <p>Bàn phím cơ gaming mini với switch quang học, phản hồi siêu nhanh</p>
+                <div class="detail-price">
+                    Price:
+                    <span class="price">$10000</span>
+                </div>
+                <br><br>
+                <button class="btn-add" id="addCart">Add to cart</button>
+            </div>
+        </div>
+        <div class="recomment">
+            <p>recomment</p>
+            <section class="products">
+                <div class="product-item">
+                    <img src="../../img/banphim.jpg" alt="">
+                    <div class="product-info">
+                        <h3>Razer Huntsman Mini</h3>
+                        <p>Bàn phím cơ gaming mini với switch quang học, phản hồi siêu nhanh.</p>
+                        <a href="../detail/detail.htm">View</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+     </div>
+    <script src="detail.js"></script>     
+</body>
+</html>
