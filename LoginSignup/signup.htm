@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
+    <div class="backtohome">
+        <a href="../index.htm">Wanna come back??</a>
+    </div>
     <div class="container">
         <div class="container-forms">
             <div class="container-info">
@@ -20,9 +23,28 @@
                     <button class="btn">Sign up</button>
                 </div>    
             </div>
-            <div class="container-form"></div>
+            <div class="container-form">
+                <div class="form-item log-in"></div>
+                <div class="form-item sign-up"></div>
+                <form class="form-item log-in" action="">
+                    <h1>Login</h1>
+                    <input id="loginUsername" name="Username" placeholder="Username" type="text">
+                    <input type="password" id="loginPassword" name="Password" placeholder="Password">
+                    <div class="loginMessage"></div>
+                    <button class="btn" type="submit">Log in</button>
+                </form>
+                <form class="form-item sign-up" action="">
+                    <h1>Sign up</h1>
+                    <input type="email" id="regEmail" placeholder="Email" name="Email">
+                    <input type="text" id="regFullName" name="Fullname" placeholder="Full name">
+                    <input type="text" id="regUsername" name="Username" placeholder="Username">
+                    <input type="password" name="Password" placeholder="Password" id="regPassword">
+                    <div id="regMessage"></div>
+                    <button class="btn" type="submit" onclick="register(event)">Sign up</button>
+                </form>
+            </div>
         </div>
     </div>
-    <script scr="signup.js"></script>
+    <script src="signup.js"></script>
 </body>
 </html>

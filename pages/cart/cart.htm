@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail page</title>
+    <title>cart page</title>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Arima:wght@100..700&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Playwrite+HU:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedgwick+Ave&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../style.css">
-    
-    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-    <!--header-->
-    <header>
+     <!--header-->
+     <header>
         <div class="logo">
             <a href="#"><img src="../../img/logo.png" alt=""></a>
         </div>
@@ -26,7 +25,7 @@
         </nav>
         <div class="header_info">
             <i class="fa fa-search"></i>
-            <a class="cart" href="../cart/cart.htm">
+            <a class="cart" href="#">
                 <p class="cart-items">0</p>
                 <i class="fa fa-shopping-basket"></i>
             </a>
@@ -36,38 +35,44 @@
             </a>
         </div>
     </header>
-    <br>
-     <div class="detail-container">
-        <a href="../../index.htm"><i class="fa-regular fa-arrow-left fa-2xl" style="color: #00c7fc;"></i></a>
-        <div class="detail">
-            <div class="detail-image">
-                <img src="../../img/banphim.jpg" alt="">
-            </div>
-            <div class="detail-info">
-                <h2>Razer Huntsman Mini</h2>
-                <p>Bàn phím cơ gaming mini với switch quang học, phản hồi siêu nhanh</p>
-                <div class="detail-price">
-                    Price:
-                    <span class="price">$10000</span>
-                </div>
-                <br><br>
-                <button class="btn-add" id="addCart">Add to cart</button>
-            </div>
-        </div>
-        <div class="recomment">
-            <p>recomment</p>
-            <section class="products">
-                <div class="product-item">
+    <div class="container">
+        <div class="cart-container">
+            <div class="cart-part">
+                <div class="cart-img">
                     <img src="../../img/banphim.jpg" alt="">
-                    <div class="product-info">
-                        <h3>Razer Huntsman Mini</h3>
-                        <p>Bàn phím cơ gaming mini với switch quang học, phản hồi siêu nhanh.</p>
-                        <a href="../detail/detail.htm">View</a>
-                    </div>
                 </div>
-            </section>
+                <div class="cart-desc">
+                    <h3>Bàn phím</h3>
+                </div>
+                <div class="cart-quantity">
+                    <input type="number" id="quantity" min="0">
+                </div>
+                <div class="cart-price">
+                    <h4>$30000</h4>
+                </div>
+                <div class="cart-total">
+                    <h4>$30000</h4>
+                </div>
+                <div class="cart-remove">
+                    <button>Remove</button>
+                </div>
+            </div>
         </div>
-     </div>
-    <script src="detail.js"></script>     
+        <div class="cart-summary">
+            <div class="porduct-total">
+                <h2>Total Product: <span id="total">$10000</span></h2>
+            </div>
+            <div class="product-checkout">
+                <a href="../checkout/checkout.htm" class="checkout">Checkout</a>
+            </div>
+            <button class="removeAll">Clear cart</button>
+        </div>
+    </div>
+    <div class="cart-empty">
+        <h2>Empty Cart ;-;</h2>
+        <h5>yooh buy somethingggg</h5>
+        <a href="../../index.htm"><button class="HomeBtn">Back to home</button></a>
+    </div>
+<script src="cart.js"></script>
 </body>
 </html>

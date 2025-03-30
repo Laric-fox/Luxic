@@ -1,17 +1,21 @@
-const fetchData = async () =>{
-    let response = await fetch("../product.json");
-    let data = await response.json();
+const products = document.querySelector('.products');
+const getData = async () => {
+    const respone = await fetch ('data.json');
+    const data = await respone.json();
 
-    let courseList = document.querySelector("#course-list");
-    courseList.innerHTML = data.map(item =>{
-        return `
-            <div class="course">
-                <img src="${item.image}" alt="${item.title}">
-                <h2>${item.title}</h2>
+    if (data) {
+        products.innerHTML =data.map(item => {
+            return `
+            <div class="product-item">
+            <img src="${item.img}" alt="">
+            <div class="product-info">
+                <h3>${item.title}</h3>
                 <p>${item.description}</p>
+                <a href="./pages/detail/detail.htm?id=${item.id}">View</a>
             </div>
-        `
-    }).join("");
+        </div>
+            `
+        }).join('')
+    }
 }
-
-fetchData()
+getData();
