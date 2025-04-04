@@ -1,5 +1,5 @@
 const detailContainer = document.querySelector('.detail-container');
-const btnAddCart = document.getElementById('addCart');
+
 const cartIcon = document.querySelector('.cart');
 
 const getDetailProduct = async () => {
@@ -26,7 +26,7 @@ const getDetailProduct = async () => {
             </div>
         </div>
     `
-
+    const btnAddCart = document.getElementById('addCart');
     btnAddCart.addEventListener('click',()=> {
         const cart = JSON.parse(localStorage.getItem('cart'));
 
@@ -48,6 +48,7 @@ const getDetailProduct = async () => {
             ]
             localStorage.setItem('cart',JSON.stringify(cart));
         }
+        setCartItem();
     });
 }
 const setCartItem= () =>{
@@ -60,5 +61,5 @@ const setCartItem= () =>{
         `
     }
 }
-setCartItem();
+setCartItem(); 
 getDetailProduct();

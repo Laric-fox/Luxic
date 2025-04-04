@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Razer Huntsman Mini",
-    "cost": "3,490,000",
+    "cost": 3490000,
     "img": "./img/banphim.jpg",
     "category": "Phụ kiện",
     "description": "Bàn phím cơ gaming mini với switch quang học, phản hồi siêu nhanh."
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "title": "Logitech G Pro X Superlight",
-    "cost": "2,990,000",
+    "cost": 2990000,
     "img": "./img/chuot.jpg",
     "category": "Phụ kiện",
     "description": "Chuột gaming không dây siêu nhẹ, hiệu suất cao, phù hợp cho eSports."
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "title": "Samsung Galaxy S23 Ultra",
-    "cost": "26,990,000",
+    "cost": 26990000,
     "img": "./img/galaxy23.jpg",
     "category": "Điện thoại",
     "description": "Smartphone cao cấp với camera 200MP, Snapdragon 8 Gen 2, màn hình 120Hz."
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "title": "Xiaomi 13 Pro",
-    "cost": "19,990,000",
+    "cost": 19990000,
     "img": "./img/xiao13.jpg",
     "category": "Điện thoại",
     "description": "Flagship với chip Snapdragon 8 Gen 2, camera Leica, sạc nhanh 120W."
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "title": "Apple iPhone 14 Pro",
-    "cost": "27,990,000",
+    "cost": 27990000,
     "img": "./img/ip14.jpg",
     "category": "Điện thoại",
     "description": "iPhone mới nhất với Dynamic Island, A16 Bionic, camera 48MP."
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "title": "Apple iPad Air 5",
-    "cost": "16,990,000",
+    "cost": 16990000,
     "img": "./img/ipadAir5.jpg",
     "category": "Máy tính bảng",
     "description": "iPad Air với chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch."
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "title": "Apple iPad Pro M2",
-    "cost": "28,990,000",
+    "cost": 28990000,
     "img": "./img/ipadM2.jpg",
     "category": "Máy tính bảng",
     "description": "iPad Pro với chip M2, màn hình Mini-LED 120Hz, hỗ trợ Apple Pencil Hover."
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "title": "Apple iPad Mini 6",
-    "cost": "12,990,000",
+    "cost": 12990000,
     "img": "./img/ipadmini.jpg",
     "category": "Máy tính bảng",
     "description": "Máy tính bảng nhỏ gọn, chip A15 Bionic, màn hình Liquid Retina."
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "title": "Asus ROG Strix G16",
-    "cost": "32,990,000",
+    "cost": 32990000,
     "img": "./img/laptop.jpg",
     "category": "Laptop",
     "description": "Laptop gaming hiệu năng cao với RTX 4060, màn hình 165Hz."
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "title": "Dell UltraSharp U2723QE",
-    "cost": "10,990,000",
+    "cost": 10990000,
     "img": "./img/maytinh.jpg",
     "category": "Màn hình",
     "description": "Màn hình 4K IPS 27 inch, công nghệ PremierColor, cổng USB-C."
@@ -82,7 +82,7 @@
   {
     "id": 11,
     "title": "JBL Charge 5",
-    "cost": "3,290,000",
+    "cost": 3290000,
     "img": "./img/loa.jpg",
     "category": "Phụ kiện",
     "description": "Loa Bluetooth chống nước IP67, âm bass mạnh, pin 20 giờ."
@@ -90,7 +90,7 @@
   {
     "id": 12,
     "title": "Anker PowerCore 20000mAh",
-    "cost": "1,290,000",
+    "cost": 1290000,
     "img": "./img/sac.jpg",
     "category": "Phụ kiện",
     "description": "Pin sạc dự phòng dung lượng lớn, hỗ trợ sạc nhanh 20W."
@@ -98,7 +98,7 @@
   {
     "id": 13,
     "title": "Sony WH-1000XM5",
-    "cost": "8,990,000",
+    "cost": 8990000,
     "img": "./img/tainghe.jpg",
     "category": "Phụ kiện",
     "description": "Tai nghe chống ồn cao cấp, chất âm Hi-Res, pin lên đến 30 giờ."

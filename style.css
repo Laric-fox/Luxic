@@ -24,6 +24,7 @@ header .logo{
     list-style: none;
     display: flex;
 }
+
 .header_navbar ul li a{
     text-decoration: none;
     font-family: "Playwrite HU", cursive;
@@ -37,6 +38,13 @@ header .logo{
 }
 .header_info {
     display: flex;
+}
+.header_info i {
+    color:rgb(91, 193, 243);
+    transition:all .8s;
+}
+.header_info i:hover {
+    color:rgb(126, 255, 246);
 }
 .header_info > a {
     color:rgb(98, 182, 241);
@@ -86,7 +94,7 @@ header .logo{
     justify-content: flex-start;
     gap: 60px;
     flex-wrap:wrap;
-    margin:80px auto;
+    margin:80px 300px;
 }
 .product-item {
     width:350px;

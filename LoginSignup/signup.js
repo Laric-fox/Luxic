@@ -69,7 +69,7 @@ function login(event){
     if(storedUser && storedUser.password === password){
         window.location.href = '../index.htm';
     }else {
-        loginMessage.innerText = 'Invalid username or password|';
+        loginMessage.innerText = 'Invalid username or password!';
         loginMessage.style.color ='red';
     }
 }
