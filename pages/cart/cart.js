@@ -2,6 +2,12 @@ let container = document.querySelector('.container');
 let cartContainer = document.querySelector('.cart-container')
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartSummary = document.querySelector('.cart-summary')
+window.addEventListener('DOMContentLoaded', ()=>{
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (loggedInUser){
+        document.getElementById('accountname').innerText = loggedInUser.username;
+    }    
+})
 const renderCartItem = async () =>{
     const response = await fetch('../../data.json');
     const data = await response.json();

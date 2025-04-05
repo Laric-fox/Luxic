@@ -1,7 +1,12 @@
 const detailContainer = document.querySelector('.detail-container');
-
+const btnAddCart = document.getElementById('addcart');
 const cartIcon = document.querySelector('.cart');
-
+window.addEventListener('DOMContentLoaded', ()=>{
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (loggedInUser){
+        document.getElementById('accountname').innerText = loggedInUser.username;
+    }    
+})
 const getDetailProduct = async () => {
     const path = new URLSearchParams(window.location.search);
     const productId = path.get ('id');
@@ -29,7 +34,12 @@ const getDetailProduct = async () => {
     const btnAddCart = document.getElementById('addCart');
     btnAddCart.addEventListener('click',()=> {
         const cart = JSON.parse(localStorage.getItem('cart'));
+        const users = JSON.parse(localStorage.getItem('users'));
 
+        if(!users){
+            alert("Ôi bạn oiiiii! Đăng nhập đi rồi chúng ta tính tiếp");
+            window.location.href="../../LoginSignup/signup.htm";
+        }
         if(cart){
             const item = cart.findIndex(item => item.id === findProductId.id);
 
