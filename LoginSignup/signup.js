@@ -67,6 +67,7 @@ function login(event){
     let storedUser = users[username];
 
     if(storedUser && storedUser.password === password){
+        localStorage.setItem('loggedInUser', JSON.stringify(storedUser))
         window.location.href = '../index.htm';
     }else {
         loginMessage.innerText = 'Invalid username or password!';

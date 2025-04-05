@@ -96,8 +96,13 @@
 }
 .HomeBtn {
     cursor:pointer;
-    border:none;
+    border:3px;
     background-color: rgb(62, 62, 62);
     margin:20px;
-    color:rgb(72, 222, 220)
+    color:rgb(72, 222, 220);
+    font-size: large;
+    border-radius: 5px;
+}
+h2 .tp{
+    margin: 200px;
 }

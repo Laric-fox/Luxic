@@ -25,7 +25,7 @@ const renderCartItem = async () =>{
                 <div class="cart-total">
                     <h4>${search.cost * itemCart.count} VND</h4>
                 </div>
-                <div class="cart-remove">
+                <div onclick="removeItem(${search.id})" class="cart-remove">
                     <button>Remove</button>
                 </div>
             </div>
@@ -37,7 +37,7 @@ const renderCartItem = async () =>{
         <div class="cart-empty">
         <h2>Empty Cart ;-;</h2>
         <h5>yooh buy somethingggg</h5>
-        <a href="../../index.htm"><button class="HomeBtn">Back to home</button></a>
+        <a href="../../index.htm"><button class="HomeBtn"> Back to home </button></a>
     </div>'
         `
     }
@@ -52,7 +52,7 @@ let update = (id) =>{
                 cart[searchIndex].count = parseInt(quantityElement.value,10) || 0;
 
                 localStorage.setItem('cart',JSON.stringify(cart));
-
+                totalProducts();
                 renderCartItem();
             }
         }
@@ -65,18 +65,30 @@ let totalProducts = async () => {
     
     if(cart.length !== 0){
         let total = cart.map(item =>{
-            let search = data.fine(itemData => itemData.id === item.id) || [];
+            let search = data.find(itemData => itemData.id === item.id) || [];
             return item.count * search.cost;
         }).reduce((x,y)=> x+y,0);
         cartSummary.innerHTML = `
          <div class="porduct-total">
-                <h2>Total Product: <span id="total"> ${total}</span></h2>
+                <h2 class="tp">Total Product: <span id="total"> ${total}</span></h2>
             </div>
             <div class="product-checkout">
                 <a href="../checkout/checkout.htm" class="checkout">Checkout</a>
             </div>
-            <button class="removeAll">Clear Cart</button>`
+            <button onclick="clearCart()" class="removeAll">Clear Cart</button>`
     }else return;
+}
+let removeItem = (id) =>{
+    let removeId = id;
+    cart = cart.filter (item => item.id !== removeId);
+    renderCartItem();
+    totalProducts();
+    localStorage.setItem('cart', JSON.stringify(cart))
+}
+let clearCart = () =>{
+    cart=[];
+    renderCartItem();
+    localStorage.setItem('cart', JSON.stringify(cart))
 }
 renderCartItem();
 totalProducts();

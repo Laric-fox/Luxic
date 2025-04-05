@@ -103,6 +103,13 @@ header .logo{
     margin: 10px 0;
     width: 60%;
 }
+.filter-btns button:hover {
+    background-color: #e0e0e0;
+}
+.filter-btns button:active {
+    background-color: rgb(91, 193, 243);
+    color:white;
+} 
 .products {
     width:80%;
     position:relative;
