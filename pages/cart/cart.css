@@ -62,7 +62,7 @@
 }
 .product-checkout {
     text-align: right;
-    margin:20px;
+    margin:20px 0;
 }
 .product-checkout a {
     background-color: rgb(33, 195, 128);

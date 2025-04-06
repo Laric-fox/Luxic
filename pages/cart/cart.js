@@ -8,11 +8,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
     if (loggedInUser){
         document.getElementById('accountname').innerText = loggedInUser.username;
     }else {
-        document.querySelector('header-account').innerHTML =
-    `
-    <i class="fa fa-user"></i>
-    <p id="accountname">Đăng nhập</p>
-    `
+        document.querySelector('header-account').innerHTML = `
+        <i class="fa fa-user"></i>
+        <p id="accountname">Đăng nhập</p>
+        `
+   
     }  
 })
 const renderCartItem = async () =>{
@@ -82,7 +82,7 @@ let totalProducts = async () => {
             return item.count * search.cost;
         }).reduce((x,y)=> x+y,0);
         cartSummary.innerHTML = `
-         <div class="porduct-total">
+         <div class="product-total">
                 <h2 class="tp">Total Product: <span id="total"> ${total}</span></h2>
             </div>
             <div class="product-checkout">

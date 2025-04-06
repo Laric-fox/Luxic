@@ -87,6 +87,6 @@ function logout(){
     `
     window.location.href='signup.htm'
 }
-headerAccount.addEventListener("click",logout);
+header_account.addEventListener("click",logout);
 setCartItem(); 
 getDetailProduct();

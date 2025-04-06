@@ -93,21 +93,34 @@ header .logo{
     width: 20%;
     margin-top: 100px;
     padding-left: 30px;
+    font-family: "Arima", system-ui;
 }
 .filter-btns{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .filter-btns > button{
     margin: 10px 0;
-    width: 60%;
+    width: 50%;
+    height:30px;
+    font-family: "Sedgwick Ave", cursive;
+    border-radius: 5px;
+    background-color: rgb(91, 193, 243);
+    color:white;
+    box-shadow: 2px 0 6px 4px rgba(75, 127, 170, 0.85);
+    border-width: 0px;
+    transition:all .5s;
 }
 .filter-btns button:hover {
-    background-color: #e0e0e0;
+    font-family: "Sedgwick Ave", cursive;
+    background-color: #55e7d8;
+    color:#fff;
+    box-shadow: 2px 0 6px 4px rgba(133, 243, 255, 0.85);
 }
 .filter-btns button:active {
-    background-color: rgb(91, 193, 243);
+    background-color: rgb(73, 150, 189);
     color:white;
 } 
 .products {

@@ -5,11 +5,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
     if (loggedInUser){
         document.getElementById('accountname').innerText = loggedInUser.username;
     }else {
-        document.querySelector('header-account').innerHTML =
-    `
-    <i class="fa fa-user"></i>
-    <p id="accountname">Đăng nhập</p>
-    `
+     document.querySelector('header-account').innerHTML = `
+     <i class="fa fa-user"></i>
+     <p id="accountname">Đăng nhập</p>
+     `
+   
     }    
 });
 const letData = async () => {
