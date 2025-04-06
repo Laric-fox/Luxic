@@ -1,10 +1,17 @@
 const products = document.querySelector('.products');
+const headerAccount = document.querySelector('.header-account');
 window.addEventListener('DOMContentLoaded', ()=>{
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (loggedInUser){
         document.getElementById('accountname').innerText = loggedInUser.username;
+    }else {
+        document.querySelector('header-account').innerHTML =
+    `
+    <i class="fa fa-user"></i>
+    <p id="accountname">Đăng nhập</p>
+    `
     }    
-})
+});
 const letData = async () => {
     const respone = await fetch ('data.json');
     const data = await respone.json();
@@ -95,4 +102,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     });
 });
+function logout(){
+    localStorage.removeItem ('loggedInUser'); 
+    document.querySelector('header-account').innerHTML =
+    `
+    <i class="fa fa-user"></i>
+    <p id="accountname">Đăng nhập</p>
+    `
+    window.location.href='signup.htm'
+}
+headerAccount.addEventListener("click",logout);
 getData();

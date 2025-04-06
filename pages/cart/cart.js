@@ -2,11 +2,18 @@ let container = document.querySelector('.container');
 let cartContainer = document.querySelector('.cart-container')
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartSummary = document.querySelector('.cart-summary')
+const header_account =document.querySelector('.header-account');
 window.addEventListener('DOMContentLoaded', ()=>{
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (loggedInUser){
         document.getElementById('accountname').innerText = loggedInUser.username;
-    }    
+    }else {
+        document.querySelector('header-account').innerHTML =
+    `
+    <i class="fa fa-user"></i>
+    <p id="accountname">Đăng nhập</p>
+    `
+    }  
 })
 const renderCartItem = async () =>{
     const response = await fetch('../../data.json');
@@ -96,5 +103,15 @@ let clearCart = () =>{
     renderCartItem();
     localStorage.setItem('cart', JSON.stringify(cart))
 }
+function logout(){
+    localStorage.removeItem ('loggedInUser'); 
+    document.querySelector('header-account').innerHTML =
+    `
+    <i class="fa fa-user"></i>
+    <p id="accountname">Đăng nhập</p>
+    `
+    window.location.href='signup.htm'
+}
+header_account.addEventListener('click',logout);
 renderCartItem();
 totalProducts();
